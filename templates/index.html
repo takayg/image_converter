@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <form method="post" action="/send" enctype="multipart/form-data">
+        <input type="file" id="img_file" name="img_file">
+        <input type="submit" value="送信">
+    </form>
+    <p>
+        {% if b64_raw_data %}
+            <img src="data:image/{{ extension }};base64,{{ b64_raw_data }}">
+        {% endif %}
+        {% if b64_gray_data %}
+            <img src="data:image/{{ extension }};base64,{{ b64_gray_data }}">
+        {% endif %}
+    </p>
+</body>
+</html>
