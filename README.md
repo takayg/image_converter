@@ -1,4 +1,5 @@
 # image_converter
+Upload png or jpg file, and this aplication converts it into gray scale image. 
 ## install
 First, install necessary library.
 ```
